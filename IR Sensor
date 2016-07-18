@@ -1,0 +1,21 @@
+int ir=A0;
+int res=A1;
+int irr,resr;
+int led=13;
+void setup()
+{
+ pinMode(ir,INPUT);
+ pinMode(res,INPUT);
+ pinMode(led,OUTPUT);
+}
+void lop()
+{
+ irr=analogRead(ir);
+ resr=analogRead(res);
+ if(irr>resr)
+ {
+  digitalWrite(led,HIGH);
+ }
+ else
+  digitalWrite(led,LOW);
+}
